@@ -1,0 +1,561 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image:url(hope.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+header {
+    text-align: center;
+    background-color: palevioletred;
+    padding: 10px;
+}
+nav {
+    background-color: rgb(221, 131, 131);
+    padding: 2px;
+    display: flex;
+}
+ul  {
+    display: inline-flex;
+    gap: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    display: inline-flex;
+    gap: 40px;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li a:hover {
+    background-color: palevioletred;
+}
+h1 {
+    text-align: center;
+    font-size: larger;
+}
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 6rem;
+    padding: 6rem;
+}
+.property-card {
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(167, 116, 133);
+    transition: all 0.3s ease;
+    padding: 15px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.property-card:hover {
+    transform: translateX(-20px);
+}
+.property-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.video-controls button {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.video-controls button:hover {
+    background-color: rgb(219, 112, 147);
+}
+footer {
+    background-color: rgb(240, 136, 136);
+    padding: 8px;
+}
+article {
+    font-size: larger;
+    color: white;
+}
+@media (max-width: 768px) {
+    
+}
+.gallery-section {
+    padding: 40px 20px;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gallery-wrapper {
+    width: 80%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.gallery-images {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img {
+    min-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+.scroll-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.scroll-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+p {
+    padding: 200px;
+    font-size: larger;
+    color: white;
+    font-weight: 900;
+}
+.i img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+/* Profile Page Styles */
+.profile-section {
+    padding: 2rem 6rem;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: rgba(236, 164, 188, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid palevioletred;
+}
+
+.profile-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.profile-bio {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: black;
+    text-align: left;
+    font-weight: normal;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-link i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    box-shadow: 0 4px 10px rgba(193, 53, 132, 0.5);
+}
+
+.instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(193, 53, 132, 0.7);
+}
+
+.youtube {
+    background: #FF0000;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+.youtube:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 1rem;
+    }
+    
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image {
+        margin-bottom: 1rem;
+    }
+    
+    .profile-bio {
+        padding: 1rem 0;
+    }
+}
+
+/* Personal Space Section Styles */
+.personal-space-section {
+    padding: 2rem 6rem;
+    margin-top: 2rem;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+    color: palevioletred;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.personal-space-content {
+    background-color: rgba(236, 164, 188, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.personal-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.personal-info p {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: black;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.6;
+}
+.contact-section {
+    padding: 2rem 6rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+    background-color: rgba(236, 164, 188, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-direct {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(236, 164, 188, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(219, 112, 147);
+}
+
+.contact-direct h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-direct p {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: black;
+    text-align: left;
+    font-weight: normal;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-link i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #E1306C;
+}
+
+.contact-link:hover {
+    color: #E1306C;
+}
+
+.email-contact {
+    margin-top: 1rem;
+}
+
+.contact-link.email i {
+    color: #d44638;
+}
+
+.contact-link.email:hover {
+    color: #d44638;
+}
+
+
+.developer-credit {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.developer-credit p {
+    padding: 0.2rem 0;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: normal;
+}
+
+.developer-credit a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.developer-credit a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1rem;
+    }
+    
+    .contact-form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-form {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Terms and Conditions Page Styles */
+.terms-section {
+    padding: 2rem 6rem;
+    margin-bottom: 3rem;
+}
+
+.terms-container {
+    background-color: rgba(236, 164, 188, 0.8);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.terms-container h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.last-updated {
+    color: #666;
+    font-style: italic;
+    padding: 0 !important;
+    margin-bottom: 2rem;
+    font-size: 0.9rem !important;
+    text-align: left !important;
+    font-weight: normal !important;
+}
+
+.terms-content {
+    color: #333;
+}
+
+.terms-group {
+    margin-bottom: 2rem;
+}
+
+.terms-group h2 {
+    color: palevioletred;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.terms-group p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 !important;
+    text-align: left;
+    color: #333;
+    font-weight: normal;
+}
+
+.terms-group a {
+    color: palevioletred;
+    text-decoration: underline;
+}
+
+.terms-group a:hover {
+    color: rgb(219, 112, 147);
+}
+
+@media (max-width: 768px) {
+    .terms-section {
+        padding: 1rem;
+    }
+    
+    .terms-container {
+        padding: 1rem;
+    }
+}

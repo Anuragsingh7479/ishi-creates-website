@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="i">
+            <img src="ishi0.jpg" width="60px" alt="img">
+        </div>
+        <h1>ISHI CREATES WEBPAGE</h1></header>
+    <nav class="nav-horizontal">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="terms & conditions.html">TERMS & CONDITIONS</a></li>
+            <li><a href="profile.html">PROFILE</a></li>
+        </ul>
+    </nav>
+    
+    <section id="gallery" class="gallery-section">
+        <h2 style="color: palevioletred;">Gallery</h2>
+        <div class="gallery-container">
+            <button class="scroll-btn prev-btn">&lt;</button>
+            <div class="gallery-wrapper">
+                <div class="gallery-images">
+                    <img src="ishi1.jpg" alt="Artwork 1">
+                    <img src="ishi2.jpg" alt="Artwork 2">
+                    <img src="ishi3.jpg" alt="Artwork 3">
+                    <img src="ishi4.jpg" alt="Artwork 4">
+                    <img src="ishi5.jpg" alt="Artwork 5">
+                    <img src="ishi6.jpg" alt="Artwork 1">
+                    <img src="ishi7.jpg" alt="Artwork 2">
+                    <img src="ishi8.jpg" alt="Artwork 3">
+                    <img src="ishi9.jpg" alt="Artwork 4">
+                    <img src="ishi10.jpg" alt="Artwork 5">
+                    <img src="ishi11.jpg" alt="Artwork 1">
+                    <img src="ishi12.jpg" alt="Artwork 2">
+                    <img src="ishi13.jpg" alt="Artwork 3">
+                    <img src="ishi14.jpg" alt="Artwork 4">
+                    <img src="ishi15.jpg" alt="Artwork 5">
+                    <img src="ishi16.jpg" alt="Artwork 1">
+                    <img src="ishi17.jpg" alt="Artwork 2">
+                    <img src="ishi18.jpg" alt="Artwork 3">
+                </div>
+            </div>
+            <button class="scroll-btn next-btn">&gt;</button>
+        </div>
+        <h2 style="color: palevioletred;">Gallery</h2>
+        <div class="gallery-container">
+            <button class="scroll-btn prev-btn">&lt;</button>
+            <div class="gallery-wrapper">
+                <div class="gallery-images">
+                    <img src="ishi19.jpg" alt="Artwork 1">
+                    <img src="ishi20.jpg" alt="Artwork 2">
+                    <img src="ishi21.jpg" alt="Artwork 3">
+                    <img src="ishi22.jpg" alt="Artwork 4">
+                    <img src="ishi23.jpg" alt="Artwork 5">
+                    <img src="ishi24.jpg" alt="Artwork 1">
+                    <img src="ishi25.jpg" alt="Artwork 2">
+                    <img src="ishi26.jpg" alt="Artwork 3">
+                    <img src="ishi 27.jpg" alt="Artwork 4">
+                    <img src="ishi.28.jpg" alt="Artwork 5">
+                    <img src="ishi29.jpg" alt="Artwork 1">
+                    <img src="ishi30.jpg" alt="Artwork 2">
+                    <img src="ishi31.jpg" alt="Artwork 3">
+                    <img src="ishi32.jpg" alt="Artwork 4">
+                    <img src="ishi33.jpg" alt="Artwork 5">
+                    <img src="ishi34.jpg" alt="Artwork 1">
+                    <img src="ishi35.jpg" alt="Artwork 2">
+                    <img src="ishi36.jpg" alt="Artwork 3">
+            </div>
+        </div>
+        <button class="scroll-btn next-btn">&gt;</button>
+        </div>
+    </section>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainers = document.querySelectorAll('.gallery-container');
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const closeBtn = document.querySelector('.close');
+            
+        
+            galleryContainers.forEach(container => {
+                const galleryWrapper = container.querySelector('.gallery-wrapper');
+                const prevBtn = container.querySelector('.prev-btn');
+                const nextBtn = container.querySelector('.next-btn');
+                
+                nextBtn.addEventListener('click', function() {
+                    galleryWrapper.scrollBy({
+                        left: 300,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                prevBtn.addEventListener('click', function() {
+                    galleryWrapper.scrollBy({
+                        left: -300,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            
+            const images = document.querySelectorAll('.gallery-images img');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modalImg.src = this.src;
+                });
+            });
+            
+            
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    </body>
+    </html>
+    
